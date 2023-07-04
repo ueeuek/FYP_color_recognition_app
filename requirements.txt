@@ -1,2 +1,6 @@
 streamlit
 google-cloud-firestore
+opencv-contrib-python-headless
+numpy
+scikit-learn
+streamlit-image-coordinates>=0.1.3

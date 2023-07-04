@@ -152,7 +152,7 @@ with c1:
 				colour_prediction = knn.predict([[h,s,v]])
 
 				## for matching colours
-				matching_colours_dataset = pd.read_csv('matching_colours.csv')
+				matching_colours_dataset = pd.read_csv('suggestions.csv')
 
 				# Search for combinations that contain the detected color
 				suggestions = matching_colours_dataset[matching_colours_dataset['Color Combination'].str.contains(colour_prediction[0], case=False)]

@@ -41,7 +41,7 @@ with c1_sidebar:
 		unsafe_allow_html=True)
 with c2_sidebar:
 	st.write('\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
-	st.image("images/about.png", width=25)
+	st.image(Image.open("images/about.png"), width=25)
 	
 
 st.sidebar.markdown("[basic guide on pairing outfits](https://www.stylecraze.com/articles/how-to-match-the-colors-of-your-clothes/)")
@@ -62,7 +62,7 @@ with c1_header:
 	)
 with c2_header:
 	st.write('\n\n\n')
-	st.image("images/header_shirt.png")
+	st.image(Image.open("images/header_shirt.png"))
 #st.header('Color Recognition App 👕👖👗🛍')
 #if st.button('Balloons?'):
 #    st.balloons()
@@ -152,7 +152,7 @@ with c1:
 				colour_prediction = knn.predict([[h,s,v]])
 
 				## for matching colours
-				matching_colours_dataset = pd.read_csv('suggestions.csv')
+				matching_colours_dataset = pd.read_csv('matching_colours.csv')
 
 				# Search for combinations that contain the detected color
 				suggestions = matching_colours_dataset[matching_colours_dataset['Color Combination'].str.contains(colour_prediction[0], case=False)]
@@ -165,20 +165,20 @@ with c1:
 				st.experimental_rerun()
 
 if st.session_state['HSV_value_text'] is None:
-	text = 'Click on the image to know the color !'
+	text = 'Select any point on the image to know its color !'
 else:
-	text = 'Colour name: <span style=\'background-color: whitesmoke;\'><strong> ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
+	text = 'Colour name: <span style=\'background-color: #9685ff; padding-left: 2.5px; padding-right: 2.5px;\'><strong>   ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
 		'Suggested matching colours for ' + st.session_state['colour_name_text'] + ':<br>'
 	# Display st.text elements using stored state
 	for index, row in st.session_state['suggestions_text'].iterrows():
 		colors = row['Color Combination'].split(' and ')
 		other_color = [color for color in colors if color != st.session_state['colour_name_text']][0]
 		category = row['Category']
-		text += f" with <span style='background-color: whitesmoke;'><strong>{other_color}</strong></span>: {category}<br>"
+		text += f" with <span style='background-color: #9685ff; padding-left: 2.5px; padding-right: 2.5px;'><strong>{other_color}</strong></span>: {category}<br>"
 	
 with c2:	
 	st.markdown(
-        f"<div style='font-family: Comic Sans MS, sans-serif; text-align: left; background-color: #AEC6CF; height: 400px; padding: 20px;'>{text}</div>",
-        unsafe_allow_html=True
+	f"<div style='color:whitesmoke; font-family: Comic Sans MS, sans-serif; text-align: left; background-color: #AEC6CF; height: 400px; padding: 20px;'>{text}</div>",
+	unsafe_allow_html=True
     )
 st.text_area('', ''' Please note that the color suggestions provided are based on general associations and recommendations. The appearance of an outfit is influenced by multiple elements, including lighting conditions, personal preferences, and individual perception. Additionally, keep in mind that the shades and brightness of colors can greatly affect the overall look and feel of an outfit. We recommend considering these factors and experimenting with different combinations to find the perfect match for your style. Please do seek help or advice from the people around you for more accurate result!''')

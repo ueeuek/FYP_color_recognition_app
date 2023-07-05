@@ -30,6 +30,12 @@ st.markdown(
 		font-family: 'Courier', sans-serif;
 		text-align: center;
 	}
+ 	[data-testid="column"] {
+		width: calc(25% - 1rem) !important;
+		flex: 1 1 calc(25% - 1rem) !important;
+		min-width: calc(20% - 1rem) !important;
+	}
+	.css-1l269bu {max-width:20% !important;}
 	</style>
     """,
     unsafe_allow_html=True

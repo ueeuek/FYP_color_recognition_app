@@ -67,7 +67,7 @@ with c1_header:
 		unsafe_allow_html=True
 	)
 with c2_header:
-	st.write('\n\n\n')
+#	st.write('\n\n\n')
 	st.image(Image.open("images/header_shirt.png"))
 
 #st.header('Color Recognition App 👕👖👗🛍')

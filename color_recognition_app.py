@@ -41,7 +41,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Using object notation
-c1_sidebar, c2_sidebar = st.sidebar.columns([4, 1])
+c1_sidebar, c2_sidebar = st.sidebar.columns([5, 1])
 with c1_sidebar:
 	st.markdown("<h1 style='text-align: right; font-family: Courier, sans-serif;'>Additional Info</h1>",
 		unsafe_allow_html=True)
@@ -63,7 +63,7 @@ st.sidebar.markdown("[Guide on Bright Spring Colors](https://www.pinterest.com/p
 c1_header, c2_header = st.columns([5, 1])
 with c1_header:		  
 	st.markdown(
-		"<h2 style='background-color: #AEC6CF; font-family: Courier, sans-serif;'>Color Recognition</h2>",
+		"<h2 style='font-family: Courier, sans-serif;'>Color Recognition</h2>",
 		unsafe_allow_html=True
 	)
 with c2_header:

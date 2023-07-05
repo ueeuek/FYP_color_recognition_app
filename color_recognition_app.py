@@ -177,7 +177,7 @@ else:
 		colors = row['Color Combination'].split(' and ')
 		other_color = [color for color in colors if color != st.session_state['colour_name_text']][0]
 		category = row['Category']
-		text += f"<span style=''><strong>{other_color}.upper()</strong></span>: {category}<br>"
+		text += f"<span style=''><strong>{other_color.upper()}</strong></span>: {category}<br>"
 	
 with c2:	
 	st.markdown(

@@ -54,15 +54,19 @@ st.sidebar.markdown("[Guide on Formal Wear](https://pin.it/1daIPmu)")
 st.sidebar.markdown("[(Men)Guide on Pairing Shoes and Pants](https://pin.it/6Zgqe5j)")
 st.sidebar.markdown("[Guide on Bright Spring Colors](https://www.pinterest.com/pin/94012710963957801/)")
 
-c1_header, c2_header = st.columns([18, 4])
-with c1_header:		  
+c1_header, c2_header, c3_header, c4_header = st.columns([1,18, 4,1])
+with c1_header:
+	st.empty()
+with c2_header:		  
 	st.markdown(
 		"<h1 style='text-align: center; font-family: Courier, sans-serif;'>Color Recognition App</h1>",
 		unsafe_allow_html=True
 	)
-with c2_header:
+with c3_header:
 	st.write('\n\n\n')
 	st.image(Image.open("images/header_shirt.png"))
+with c4_header:	
+	st.empty()
 #st.header('Color Recognition App 👕👖👗🛍')
 #if st.button('Balloons?'):
 #    st.balloons()
@@ -89,7 +93,7 @@ img1 = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 #st.text(f'({img1.shape[1]}x{img1.shape[0]})')
 #st.header('colour detected')
 # st.markdown(
-    # "<h1 style='text-align: center; font-family: Courier, sans-serif;'>Colour Detected</h1> <p>Interact with the image to find your desire colour!</p>",
+    # "<h1 style='text-align: center; font-family: Courier, sans-serif;'>Color Detected</h1> <p>Interact with the image to find your desire colour!</p>",
     # unsafe_allow_html=True
 # )
 
@@ -97,7 +101,7 @@ st.markdown(
     """
     <div style='text-align: center; font-family: Courier, sans-serif;'>
         <h1>Colour Detected</h1>
-        <p>Interact with the image to find your desired colour!</p>
+        <p>Interact with the image to find your desired color!</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -167,14 +171,14 @@ with c1:
 if st.session_state['HSV_value_text'] is None:
 	text = 'Select any point on the image to know its color !'
 else:
-	text = 'Colour name: <span style=\'background-color: #AEC6CF; padding-left:3px; padding-right:3px;\'><strong>   ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
-		'Suggested matching colours for ' + st.session_state['colour_name_text'] + ':<br>'
+	text = 'Color name: <span style=\'background-color: #AEC6CF; padding-left:3px; padding-right:3px;\'><strong>   ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
+		'Suggested matching colors for ' + st.session_state['colour_name_text'] + ':<br>'
 	# Display st.text elements using stored state
 	for index, row in st.session_state['suggestions_text'].iterrows():
 		colors = row['Color Combination'].split(' and ')
 		other_color = [color for color in colors if color != st.session_state['colour_name_text']][0]
 		category = row['Category']
-		text += f" with <span style='background-color: #AEC6CF; padding-left: 3px; padding-right:3px;'><strong>{other_color}</strong></span>: {category}<br>"
+		text += f" with <span style='background-color: #AEC6CF; padding-left:3px; padding-right:3px;'><strong>{other_color}</strong></span>: {category}<br>"
 	
 with c2:	
 	st.markdown(

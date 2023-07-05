@@ -71,7 +71,7 @@ st.markdown(
         display: flex;
         align-items: center;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
         .stColumn {
             flex-direction: row;
             flex-wrap: wrap;

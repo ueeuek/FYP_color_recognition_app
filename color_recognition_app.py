@@ -73,9 +73,9 @@ with c2_header:
 #st.header('Color Recognition App 👕👖👗🛍')
 #if st.button('Balloons?'):
 #    st.balloons()
-st.write("Please ensure the image is taken under good lighting conditions for accurate processing.")
+#st.write("Please ensure the image is taken under good lighting conditions for accurate processing.")
 bytes_data = None
-img_file_buffer = st.camera_input('Please provide an image for processing')
+img_file_buffer = st.camera_input('Please provide an image for processing, ensure the image is taken under good lighting conditions for accurate processing.')
 uploaded_file = st.file_uploader("", type=["png", "jpg", "jpeg"])
 if img_file_buffer is not None:
 	bytes_data = img_file_buffer.getvalue()

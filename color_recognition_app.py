@@ -59,7 +59,7 @@ with c1_header:
 	st.empty()
 with c2_header:		  
 	st.markdown(
-		"<h2 style='text-align: center; font-family: Courier, sans-serif;'>Color Recognition App</h2>",
+		"<h2 style='text-align: center; font-family: Courier, sans-serif;'>Color Recognition</h2>",
 		unsafe_allow_html=True
 	)
 with c3_header:

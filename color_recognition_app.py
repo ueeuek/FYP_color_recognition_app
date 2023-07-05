@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw
 st.set_page_config(
     page_title="Color Recognition",
     page_icon="🥼",
-    layout="centered",
+    layout="full",
     initial_sidebar_state="expanded",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',

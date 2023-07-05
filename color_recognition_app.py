@@ -59,26 +59,8 @@ st.sidebar.markdown("[Understand the colours](https://luxe.digital/lifestyle/sty
 st.sidebar.markdown("[Guide on Formal Wear](https://pin.it/1daIPmu)")
 st.sidebar.markdown("[(Men)Guide on Pairing Shoes and Pants](https://pin.it/6Zgqe5j)")
 st.sidebar.markdown("[Guide on Bright Spring Colors](https://www.pinterest.com/pin/94012710963957801/)")
-st.markdown(
-    """
-    <div style="display: flex; align-items: center;">
-        <div style="flex-grow: 4;">
-            <h2 style="background-color: #AEC6CF; font-family: Courier, sans-serif;">Color Recognition</h2>
-        </div>
-        <div style="flex-grow: 0.5; margin-left: 10px;">
-            <img src="images/header_shirt.png" width="40">
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-with st.container():
-	st.markdown(
-		"<h2 style='background-color: #AEC6CF; font-family: Courier, sans-serif;'>Color Recognition</h2>",
-		unsafe_allow_html=True
-	)
-	st.image(Image.open("images/header_shirt.png"), width=40)
-c1_header, c2_header = st.columns([0.1, 0.005])
+
+c1_header, c2_header = st.columns([5, 1])
 with c1_header:		  
 	st.markdown(
 		"<h2 style='background-color: #AEC6CF; font-family: Courier, sans-serif;'>Color Recognition</h2>",

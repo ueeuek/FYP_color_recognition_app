@@ -26,7 +26,7 @@ st.markdown(
     """
 	<style>
 	body {
-		
+		background-color: #AEC6CF;
 		font-family: 'Courier', sans-serif;
 		text-align: center;
 	}

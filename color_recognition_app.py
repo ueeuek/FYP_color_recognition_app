@@ -47,7 +47,7 @@ with c1_sidebar:
 		unsafe_allow_html=True)
 with c2_sidebar:
 	st.write('\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
-	st.image(Image.open("images/about.png"), width=25)
+	st.image(Image.open("images/about.png"))
 	
 
 st.sidebar.markdown("[basic guide on pairing outfits](https://www.stylecraze.com/articles/how-to-match-the-colors-of-your-clothes/)")

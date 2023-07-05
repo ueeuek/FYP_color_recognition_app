@@ -177,8 +177,8 @@ else:
 		colors = row['Color Combination'].split(' and ')
 		other_color = [color for color in colors if color != st.session_state['colour_name_text']][0]
 		category = row['Category']
-		text += f"<span style='display: inline-block; width: 30px; height: 18px; background-color:' + {other_color} + '; margin-left: 6px;'></span><span style='padding: 0px 6px'><strong>{other_color.upper()}</strong></span>: {category}<br>"
-	
+		text += f"<span style='display: inline-block; width: 30px; height: 18px; background-color:{other_color}; margin-left: 6px;'></span><span style='padding: 0px 6px'><strong>{other_color.upper()}</strong></span>: {category}<br>"
+
 with c2:	
 	st.markdown(
 	f"<div style='font-family: Comic Sans MS, sans-serif; text-align: left; '>{text}</div>",

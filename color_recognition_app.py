@@ -167,14 +167,14 @@ with c1:
 if st.session_state['HSV_value_text'] is None:
 	text = 'Select any point on the image to know its color !'
 else:
-	text = 'Colour name: <span style=\'background-color: #AEC6CF; padding-left: 2.5px; padding-right: 2.5px;\'><strong>   ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
+	text = 'Colour name: <span style=\'background-color: #AEC6CF; padding-left:3px; padding-right:3px;\'><strong>   ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
 		'Suggested matching colours for ' + st.session_state['colour_name_text'] + ':<br>'
 	# Display st.text elements using stored state
 	for index, row in st.session_state['suggestions_text'].iterrows():
 		colors = row['Color Combination'].split(' and ')
 		other_color = [color for color in colors if color != st.session_state['colour_name_text']][0]
 		category = row['Category']
-		text += f" with <span style='background-color: #9685ff; padding-left: 2.5px; padding-right: 2.5px;'><strong>{other_color}</strong></span>: {category}<br>"
+		text += f" with <span style='background-color: #AEC6CF; padding-left: 3px; padding-right:3px;'><strong>{other_color}</strong></span>: {category}<br>"
 	
 with c2:	
 	st.markdown(

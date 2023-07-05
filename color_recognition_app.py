@@ -57,7 +57,7 @@ st.sidebar.markdown("[Guide on Bright Spring Colors](https://www.pinterest.com/p
 c1_header, c2_header, c3_header = st.columns([4, 0.5, 0.5])
 with c1_header:		  
 	st.markdown(
-		"<h2 style='background-color: #AEC6CF; padding:0px; text-align: center; font-family: Courier, sans-serif;'>Color Recognition</h2>",
+		"<h2 style='background-color: #AEC6CF; font-family: Courier, sans-serif;'>Color Recognition</h2>",
 		unsafe_allow_html=True
 	)
 with c2_header:

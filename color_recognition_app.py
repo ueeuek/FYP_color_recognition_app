@@ -54,9 +54,7 @@ st.sidebar.markdown("[Guide on Formal Wear](https://pin.it/1daIPmu)")
 st.sidebar.markdown("[(Men)Guide on Pairing Shoes and Pants](https://pin.it/6Zgqe5j)")
 st.sidebar.markdown("[Guide on Bright Spring Colors](https://www.pinterest.com/pin/94012710963957801/)")
 
-c1a_header,c1_header, c2_header, c3_header = st.columns([2, 4, 0.5, 0.5])
-with c1a_header:
-	st.empty()
+c1_header, c2_header = st.columns([4, 0.5])
 with c1_header:		  
 	st.markdown(
 		"<h2 style='background-color: #AEC6CF; font-family: Courier, sans-serif;'>Color Recognition</h2>",
@@ -65,8 +63,18 @@ with c1_header:
 with c2_header:
 	st.write('\n\n\n')
 	st.image(Image.open("images/header_shirt.png"), width=40)
-with c3_header:
-	st.empty()
+# Add CSS style
+st.markdown(
+    """
+    <style>
+    .stColumn {
+        display: flex;
+        align-items: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 #st.header('Color Recognition App 👕👖👗🛍')
 #if st.button('Balloons?'):
 #    st.balloons()

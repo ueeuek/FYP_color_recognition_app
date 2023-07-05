@@ -57,12 +57,12 @@ st.sidebar.markdown("[Guide on Bright Spring Colors](https://www.pinterest.com/p
 c1_header, c2_header = st.columns([16, 3])
 with c1_header:		  
 	st.markdown(
-		"<h2 style='text-align: center; font-family: Courier, sans-serif;'>Color Recognition</h2>",
+		"<h3 style='text-align: center; font-family: Courier, sans-serif;'>Color Recognition</h3>",
 		unsafe_allow_html=True
 	)
 with c2_header:
 	st.write('\n\n\n')
-	st.image(Image.open("images/header_shirt.png"))
+	st.image(Image.open("images/header_shirt.png"), width=40)
 
 #st.header('Color Recognition App 👕👖👗🛍')
 #if st.button('Balloons?'):

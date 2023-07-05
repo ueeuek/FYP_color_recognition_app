@@ -176,9 +176,10 @@ if st.session_state['HSV_value_text'] is None:
 else:
 	text = 'Color name: <span style=\'background-color: #AEC6CF; padding-left:3px; padding-right:3px;\'><strong>   ' + st.session_state['colour_name_text'] + '</strong></span><br>' +\
 		'Suggested matching colors for ' + st.session_state['colour_name_text'] + ':<br>'
-	text = 'Color name: <span style="background-color: #AEC6CF; padding-left: 3px; padding-right: 3px;"><strong>' + \
-		st.session_state['colour_name_text'] + '</strong></span><br>' + \
+	text = 'Color name: <span style="display: inline-flex; align-items: center; background-color: #AEC6CF; padding: 2px 6px; border-radius: 4px;"><strong>' + \
+       		st.session_state['colour_name_text'] + '</strong></span><br>' + \
        		'Suggested matching colors for ' + st.session_state['colour_name_text'] + ':<br>'
+
 
 	# Display st.text elements using stored state
 	for index, row in st.session_state['suggestions_text'].iterrows():

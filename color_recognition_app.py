@@ -160,7 +160,7 @@ with c1:
 
 				brightness = ''
 				if colour_prediction[0] not in ['black', 'white']:
-					Lightness_dict = {10: 'and very dark', 30: 'dark', 50: '', 70: 'light', 90: 'and very light'}
+					Lightness_dict = {10: 'very dark', 30: 'dark', 50: '', 70: 'light', 90: 'very light'}
 					Lightness_for_dict = min(Lightness_dict, key=lambda x: abs(x - v))
 					brightness = Lightness_dict[Lightness_for_dict]
 	

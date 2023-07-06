@@ -109,7 +109,7 @@ cv2.imwrite('ImageCaptured.jpg', img1)
 
 def get_ellipse_coords(center):
 	x, y = center
-	radius = 10  # Adjust the radius according to your requirements
+	radius = 6  # Adjust the radius according to your requirements
 	coords = [(x - radius, y - radius), (x + radius, y + radius)]
 	return coords
 

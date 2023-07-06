@@ -168,7 +168,12 @@ with c1:
 if st.session_state['HSV_value_text'] is None:
 	text = 'Select any point on the image to know its color. You may tilt your phone to view full image !'
 else:
-	text = 'This is <span style="padding: 0px 6px"><strong>' + st.session_state['colour_name_text'].upper() +\
+	if st.session_state['colour_name_text'] not in ['black', 'white']:
+		Lightness_dict = {10: 'and very dark', 30: 'dark', 50: '', 70: 'light', 90: 'and very light'}
+    		Lightness_for_dict = min(Lightness_dict, key=l)
+    		brightness = Lightness_dict[Lightness_for_dict]
+
+	text = 'This is <span style="padding: 0px 6px"><strong>' + brightness + ' ' + st.session_state['colour_name_text'].upper() +\
 		'</strong></span> <span style="display: inline-block; width: 30px; height: 18px; background-color:' + st.session_state['colour_name_text'] + '; margin-left: 6px;"></span><br>' +\
 		'Suggest to match with: <br>'
 

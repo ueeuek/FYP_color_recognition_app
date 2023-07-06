@@ -171,8 +171,8 @@ else:
 	brightness = ''
 	if st.session_state['colour_name_text'] not in ['black', 'white']:
 		Lightness_dict = {10: 'and very dark', 30: 'dark', 50: '', 70: 'light', 90: 'and very light'}
-    		Lightness_for_dict = min(Lightness_dict, key=l)
-    		brightness = Lightness_dict[Lightness_for_dict]
+		Lightness_for_dict = min(Lightness_dict, key=l)
+		brightness = Lightness_dict[Lightness_for_dict]
 		#st.write(brightness)
 
 	text = 'This is <span style="padding: 0px 6px"><strong>' + brightness + ' ' + st.session_state['colour_name_text'].upper() +\

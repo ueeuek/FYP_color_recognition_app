@@ -158,30 +158,24 @@ with c1:
 				# Search for combinations that contain the detected color
 				suggestions = matching_colours_dataset[matching_colours_dataset['Color Combination'].str.contains(colour_prediction[0], case=False)]
 
+				brightness = ''
+				if colour_prediction[0] not in ['black', 'white']:
+					Lightness_dict = {10: 'and very dark', 30: 'dark', 50: '', 70: 'light', 90: 'and very light'}
+					Lightness_for_dict = min(Lightness_dict, key=lambda x: abs(x - v))
+					brightness = Lightness_dict[Lightness_for_dict]
+	
 				# Store the state of st.text elements
 				st.session_state['value_text'] = value if value is not None else ''
 				st.session_state['HSV_value_text'] = HSVvalue if value is not None else ''
+				st.session_state['brightness'] = brightness if value is not None else ''
 				st.session_state['colour_name_text'] = colour_prediction[0] if value is not None else ''
 				st.session_state['suggestions_text'] = suggestions if value is not None else ''
 				st.experimental_rerun()
 
-brightness = ''
-if st.session_state['colour_name_text'] not in ['black', 'white']:
-	Lightness_dict = {10: 'and very dark', 30: 'dark', 50: '', 70: 'light', 90: 'and very light'}
-	Lightness_for_dict = min(Lightness_dict, key=lambda x: abs(x - v))
-	brightness = Lightness_dict[Lightness_for_dict]
-	st.write(brightness)
 if st.session_state['HSV_value_text'] is None:
 	text = 'Select any point on the image to know its color. You may tilt your phone to view full image !'
 else:
-	#brightness = ''
-	#if st.session_state['colour_name_text'] not in ['black', 'white']:
-	#	Lightness_dict = {10: 'and very dark', 30: 'dark', 50: '', 70: 'light', 90: 'and very light'}
-	#	Lightness_for_dict = min(Lightness_dict, key=lambda x: abs(x - v))
-	#	brightness = Lightness_dict[Lightness_for_dict]
-	#	#st.write(brightness)
-
-	text = 'This is <span style="padding: 0px 6px"><strong>' + brightness + ' ' + st.session_state['colour_name_text'].upper() +\
+	text = 'This is <span style="padding: 0px 6px"><strong>' + st.session_state['brightness'] + ' ' + st.session_state['colour_name_text'].upper() +\
 		'</strong></span> <span style="display: inline-block; width: 30px; height: 18px; background-color:' + st.session_state['colour_name_text'] + '; margin-left: 6px;"></span><br>' +\
 		'Suggest to match with: <br>'
 

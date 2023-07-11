@@ -54,7 +54,7 @@ with c2_sidebar:
 	st.image(Image.open("images/about.png"), width=25)
 	
 
-st.sidebar.markdown("[basic guide on pairing outfits](https://www.stylecraze.com/articles/how-to-match-the-colors-of-your-clothes/)")
+st.sidebar.markdown("[basic guide on pairing outfits](https://www.stylecraze.com/articles/how-to-match-the-colors-of-your-clothes/)", unsafe_allow_html=True)
 st.sidebar.markdown("[basic guide on pairing outfits - video](https://www.google.com/search?q=matching+colours+fashion&oq=matching+colours+fashion&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDg4MzlqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:b3674b6a,vid:WLkVEvcuqT8)")
 st.sidebar.markdown("[5 Different Looks](https://wonder-wardrobe.com/blog/5-color-outfit-matching-methods)")
 st.sidebar.markdown("[psychology](https://www.verywellmind.com/color-psychology-2795824)")

@@ -37,12 +37,18 @@ st.markdown(
 	textarea.st-cl {
 		font-family: 'Courier', sans-serif;
 	}
-	.sidebar-markdown {
-		font-family: 'Courier', sans-serif;"
-	}
 	</style>
     """,
     unsafe_allow_html=True
+)
+
+st.sidebar.markdown(
+	"<style>"
+	"    .sidebar-markdown {"
+	"        font-family: 'Courier', sans-serif;"
+	"    }"
+	"</style>",
+	unsafe_allow_html=True
 )
 # Using object notation
 c1_sidebar, c2_sidebar = st.sidebar.columns([5, 1])

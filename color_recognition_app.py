@@ -71,7 +71,7 @@ with c2_header:
 	st.image(Image.open("images/header_shirt.png"))
 
 st.markdown(
-	"<p style='font-family: Courier, sans-serif;'>Please provide an image for processing, ensure the image is taken under good lighting conditions for accurate processing. </p>",
+	"<p style='font-family: Courier, sans-serif; font-size:13px;'>Please provide an image for processing, ensure the image is taken under good lighting conditions for accurate processing. </p>",
 	unsafe_allow_html=True
 )
 bytes_data = None

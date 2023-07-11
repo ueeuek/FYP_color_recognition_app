@@ -41,7 +41,21 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.sidebar.markdown(
+    """
+	<style>
+	body {
+		background-color: #AEC6CF;
+		font-family: 'Courier', sans-serif;
+		text-align: center;
+	}
+	a {
+		font-family: 'Courier', sans-serif;
+	}
+	</style>
+    """,
+    unsafe_allow_html=True
+)
 # Using object notation
 c1_sidebar, c2_sidebar = st.sidebar.columns([5, 1])
 with c1_sidebar:

@@ -154,7 +154,7 @@ with c1:
 					brightness = Lightness_dict[Lightness_for_dict]
 	
 				# Store the state of st.text elements
-				st.session_state['point'] = value if value is not None else ''
+				st.session_state['value_text'] = value if value is not None else ''
 				st.session_state['HSV_value_text'] = HSVvalue if value is not None else ''
 				st.session_state['brightness'] = brightness if value is not None else ''
 				st.session_state['colour_name_text'] = colour_prediction[0] if value is not None else ''

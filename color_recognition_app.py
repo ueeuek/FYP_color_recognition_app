@@ -37,8 +37,8 @@ st.markdown(
 	textarea.st-cl {
 		font-family: 'Courier', sans-serif;
 	}
-	sidebar.st-cl {
-		font-family: 'Courier', sans-serif;
+	.sidebar-markdown {
+		font-family: 'Courier', sans-serif;"
 	}
 	</style>
     """,

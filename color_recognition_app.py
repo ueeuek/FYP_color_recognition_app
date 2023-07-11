@@ -1,4 +1,3 @@
-#https://github.com/whitphx/streamlit-webrtc
 import streamlit as st
 import cv2
 import numpy as np
@@ -9,7 +8,6 @@ from streamlit_image_coordinates import streamlit_image_coordinates
 from io import StringIO
 from PIL import Image, ImageDraw
 
-#https://docs.streamlit.io/library/api-reference/utilities/st.set_page_config
 st.set_page_config(
     page_title="Color Recognition",
     page_icon="🥼",
@@ -67,12 +65,7 @@ with c1_header:
 		unsafe_allow_html=True
 	)
 with c2_header:
-#	st.write('\n\n\n')
 	st.image(Image.open("images/header_shirt.png"))
-
-#st.header('Color Recognition App 👕👖👗🛍')
-#if st.button('Balloons?'):
-#    st.balloons()
 
 bytes_data = None
 img_file_buffer = st.camera_input('Please provide an image for processing, ensure the image is taken under good lighting conditions for accurate processing.')
@@ -88,10 +81,7 @@ elif uploaded_file is not None:
 if bytes_data is None:
 	st.stop()
 
-
 knn = joblib.load('model.pkl')
-###*********************************************************************************************************************************************************
-
 img1 = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 
 st.markdown(
@@ -105,7 +95,6 @@ st.markdown(
 )
 
 cv2.imwrite('ImageCaptured.jpg', img1)
-#st.write(value)
 
 def get_ellipse_coords(center):
 	x, y = center
@@ -116,7 +105,6 @@ def get_ellipse_coords(center):
 # Initialize the session state dictionary	
 if "point" not in st.session_state:
 	st.session_state["point"] = None
-	st.session_state["value_text"] = None
 	st.session_state["HSV_value_text"] = None
 	st.session_state["colour_name_text"] = None
 	st.session_state["suggestions_text"] = None
@@ -152,7 +140,7 @@ with c1:
 
 				colour_prediction = knn.predict([[h,s,v]])
 
-				## for matching colours
+				## read in for matching colours
 				matching_colours_dataset = pd.read_csv('suggestions.csv')
 
 				# Search for combinations that contain the detected color
@@ -165,7 +153,7 @@ with c1:
 					brightness = Lightness_dict[Lightness_for_dict]
 	
 				# Store the state of st.text elements
-				st.session_state['value_text'] = value if value is not None else ''
+				st.session_state['point'] = value if value is not None else ''
 				st.session_state['HSV_value_text'] = HSVvalue if value is not None else ''
 				st.session_state['brightness'] = brightness if value is not None else ''
 				st.session_state['colour_name_text'] = colour_prediction[0] if value is not None else ''

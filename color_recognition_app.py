@@ -178,10 +178,11 @@ else:
 		other_color = [color for color in colors if color != st.session_state['colour_name_text']][0]
 		category = row['Category']
 		text += f"<span style='display: inline-block; width: 30px; height: 18px; background-color:{other_color}; margin-left: 6px;'></span><span style='padding: 0px 6px'><strong>{other_color.upper()}</strong></span>: {category}<br>"
-
+#style='font-family: Courier, sans-serif;'
+#Comic Sans MS
 with c2:	
 	st.markdown(
-	f"<div style='font-family: Comic Sans MS, sans-serif; text-align: left; '>{text}</div>",
+	f"<div style='font-family: Courier, sans-serif; text-align: left; '>{text}</div>",
 	unsafe_allow_html=True
     )
 st.text_area('', '''⚠Please note that the suggestions provided are based on general associations and recommendations. The appearance of an outfit is influenced by multiple elements, including lighting conditions, personal preferences, and individual perception. Additionally, keep in mind that the shades and brightness of colors can greatly affect the overall look and feel of an outfit. We recommend considering these factors and experimenting with different combinations to find the perfect match for your style. Please do seek help or advice from the people around you for more accurate result!''')

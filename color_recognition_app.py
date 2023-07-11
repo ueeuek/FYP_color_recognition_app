@@ -51,7 +51,7 @@ st.sidebar.markdown(
 	}
 	a {
 		font-family: 'Courier', sans-serif;
-		font-size: 11px;
+		font-size: 13px;
 	}
 	</style>
     """,

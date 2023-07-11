@@ -72,7 +72,7 @@ st.markdown(
 	unsafe_allow_html=True
 )
 bytes_data = None
-img_file_buffer = st.camera_input('Please provide an image for processing, ensure the image is taken under good lighting conditions for accurate processing.')
+img_file_buffer = st.camera_input('')
 uploaded_file = st.file_uploader("", type=["png", "jpg", "jpeg"])
 if img_file_buffer is not None:
 	bytes_data = img_file_buffer.getvalue()
@@ -91,8 +91,8 @@ img1 = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 st.markdown(
     """
     <div style='text-align: center; font-family: Courier, sans-serif;'>
-        <h1 style='text-align: center; font-family: Courier, sans-serif;'>Colour Detected</h1>
-        <p>Interact with the image to find your desired color! You may tilt your phone to view full image. Please <strong>CLEAR</strong> the previous image before providing a NEW image ! </p>
+        <h2 style='text-align: center; font-family: Courier, sans-serif;'>Colour Detected</h2>
+        <p style='font-size:15px;'>Interact with the image to find your desired color! You may tilt your phone to view full image. Remember to <strong>CLEAR</strong> the previous image before providing a NEW image!</p>
     </div>
     """,
     unsafe_allow_html=True

@@ -105,6 +105,7 @@ def get_ellipse_coords(center):
 # Initialize the session state dictionary	
 if "point" not in st.session_state:
 	st.session_state["point"] = None
+	st.session_state["value_text"] = None
 	st.session_state["HSV_value_text"] = None
 	st.session_state["colour_name_text"] = None
 	st.session_state["suggestions_text"] = None

@@ -92,7 +92,7 @@ st.markdown(
     """
     <div style='text-align: center; font-family: Courier, sans-serif;'>
         <h2 style='text-align: center; font-family: Courier, sans-serif;'>Colour Detected</h2>
-        <p style='font-size:11px;'>Interact with the image to find your desired color! You may tilt your phone to view full image. Remember to <strong>CLEAR</strong> the previous image before providing a NEW image!</p>
+        <p style='font-size:13px;'>Interact with the image to find your desired color! You may tilt your phone to view full image. Remember to <strong>CLEAR</strong> the previous image before providing a NEW image!</p>
     </div>
     """,
     unsafe_allow_html=True
